@@ -1,0 +1,17 @@
+import HautevilleHouse.CellBiologyHedgehogSignalingFoundationCanonicalLaneLean.HedgehogSignalingPathway
+import HautevilleHouse.CellBiologyHedgehogSignalingFoundationCanonicalLaneLean.SignalTransductionComplex
+import HautevilleHouse.CellBiologyHedgehogSignalingFoundationCanonicalLaneLean.GeneExpressionRegulation
+import HautevilleHouse.CellBiologyHedgehogSignalingFoundationCanonicalLaneLean.CellProliferationControl
+import HautevilleHouse.CellBiologyHedgehogSignalingFoundationCanonicalLaneLean.DevelopmentalPatterning
+
+namespace HautevilleHouse
+namespace CellBiologyHedgehogSignalingFoundationCanonicalLaneLean
+
+def ConstrainedHedgehogSignalingClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_hedgehog_signaling_endgame (A : AdmissibleClass) : ConstrainedHedgehogSignalingClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end CellBiologyHedgehogSignalingFoundationCanonicalLaneLean
+end HautevilleHouse
